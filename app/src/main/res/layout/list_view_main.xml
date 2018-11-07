@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/redditFeedLayout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+
+    <TextView
+            android:id="@+id/categoryItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="This will be where the subreddit category will go"
+            android:textSize="12sp"
+            android:text="Subreddit"
+            android:textColor="@color/red"
+            android:layout_alignStart="@id/imageItem"
+            android:layout_above="@id/titleItem"
+    />
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+    <TextView
+            android:id="@+id/titleItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="This will be where the title will go"
+            android:textSize="18sp"
+            android:text="Post Title"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="5"
+    />
+        <ImageView
+                android:id="@+id/imageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Thumbnail image"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+        />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
