@@ -6,7 +6,9 @@
         android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp">
+        android:layout_marginEnd="5dp"
+
+        >
 
     <TextView
             android:id="@+id/categoryItem"
@@ -16,20 +18,8 @@
             android:textSize="12sp"
             android:text="Subreddit"
             android:textColor="@color/red"
-            android:layout_alignStart="@id/imageItem"
-            android:layout_above="@id/titleItem"
     />
-    <TextView
-            android:id="@+id/url"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="Url"
-            android:textSize="12sp"
-            android:text="url"
-            android:textColor="@color/colorPrimary"
-            android:layout_alignStart="@id/imageItem"
-            android:layout_above="@id/titleItem"
-    />
+
 
     <LinearLayout android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
@@ -41,11 +31,15 @@
             android:layout_height="wrap_content"
             android:contentDescription="Post title"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:text="Post Title"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="5"
+            android:onClick="onClick"
+            android:autoLink="web"
+            android:clickable="true"
     />
+
         <ImageView
                 android:id="@+id/imageItem"
                 android:layout_width="wrap_content"
@@ -58,6 +52,17 @@
 
     </LinearLayout>
 
+    <TextView
+            android:id="@+id/url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Url"
+            android:textSize="12sp"
+            android:text="url"
+            android:autoLink="web"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
 
+    />
 
 </LinearLayout>

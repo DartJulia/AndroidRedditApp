@@ -42,7 +42,6 @@ class MainFragment() : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = container?.inflate(R.layout.fragment_main)
-
         redditList = view?.findViewById(R.id.rvList) as RecyclerView?
         redditList?.adapter = adapter
         redditList?.setHasFixedSize(true)
