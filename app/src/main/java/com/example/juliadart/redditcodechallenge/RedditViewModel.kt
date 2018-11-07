@@ -3,13 +3,14 @@ package com.example.juliadart.redditcodechallenge
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.util.Log
-import com.example.juliadart.redditcodechallenge.Model.ChildData
+import com.example.juliadart.redditcodechallenge.API.ApiClient
 import com.example.juliadart.redditcodechallenge.Model.RedditResponse
 import io.reactivex.schedulers.Schedulers
 
 class RedditViewModel : ViewModel() {
 
-    private var apiClient: ApiClient = ApiClient()
+    private var apiClient: ApiClient =
+        ApiClient()
     val redditResponse = MutableLiveData<RedditResponse>()
 
     init {
