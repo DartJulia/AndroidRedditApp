@@ -17,7 +17,4 @@ interface ApiOperations {
 
     @GET("/top.json")
     fun getTop(): Single<RedditResponse>
-
-    //@Query("after") after: String,
-    //               @Query("limit") limit: String
 }

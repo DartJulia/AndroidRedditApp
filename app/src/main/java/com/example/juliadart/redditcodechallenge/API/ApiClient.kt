@@ -7,17 +7,15 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import java.util.concurrent.TimeUnit
 
 
-class ApiClient() {
+class ApiClient {
 
     private val TAG = ApiClient::class.java.simpleName
     private val retrofit: Retrofit
     private val apiUrl = "https://www.reddit.com/"
-
 
     // Moshi converter replaces GSON to process JSON
     // Retrofit API library builder
@@ -52,7 +50,4 @@ class ApiClient() {
         return apiOperations.getMain()
     }
 
-    fun getTop(): Single<RedditResponse> {
-        return apiOperations.getTop()
-    }
 }

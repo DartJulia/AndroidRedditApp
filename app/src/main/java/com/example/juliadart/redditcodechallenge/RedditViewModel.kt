@@ -1,5 +1,6 @@
 package com.example.juliadart.redditcodechallenge
 
+import android.annotation.SuppressLint
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.util.Log
@@ -17,6 +18,7 @@ class RedditViewModel : ViewModel() {
         getApiData()
     }
 
+    @SuppressLint("CheckResult")
     fun getApiData() {
         apiClient.getMainPage().subscribeOn(Schedulers.io()).subscribe({ response ->
             Log.d("JD", response.toString())
@@ -28,9 +30,10 @@ class RedditViewModel : ViewModel() {
 
     }
 
+    @SuppressLint("CheckResult")
     fun getSubReddit(query: String) {
-        apiClient.getSubReddit(query).subscribeOn(Schedulers.io()).subscribe({ response ->
+        apiClient.getSubReddit(query).subscribeOn(Schedulers.io()).subscribe { response ->
             redditResponse.postValue(response)
-        })
+        }
     }
 }

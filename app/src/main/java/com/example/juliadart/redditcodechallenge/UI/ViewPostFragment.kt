@@ -2,7 +2,7 @@ package com.example.juliadart.redditcodechallenge.UI
 
 import android.support.v4.app.Fragment
 
-class ViewPostFragment() : Fragment() {
+class ViewPostFragment : Fragment() {
 
     companion object {
 

@@ -13,7 +13,7 @@ import com.example.juliadart.redditcodechallenge.R
 import com.example.juliadart.redditcodechallenge.RedditViewModel
 import com.example.juliadart.redditcodechallenge.inflate
 
-class MainFragment() : Fragment() {
+class MainFragment : Fragment() {
 
     private var redditList: RecyclerView? = null
     lateinit var viewModel: RedditViewModel
@@ -23,9 +23,8 @@ class MainFragment() : Fragment() {
 
         @JvmStatic
         fun newInstance(): MainFragment {
-            val fragment = MainFragment()
 
-            return fragment
+            return MainFragment()
         }
     }
 
