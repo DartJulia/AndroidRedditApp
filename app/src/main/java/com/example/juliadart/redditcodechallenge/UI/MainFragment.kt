@@ -9,17 +9,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import com.example.juliadart.redditcodechallenge.R
 import com.example.juliadart.redditcodechallenge.RedditViewModel
 import com.example.juliadart.redditcodechallenge.inflate
-import kotlinx.android.synthetic.main.list_view_main.*
-import android.content.Intent
-import android.net.Uri
-import android.widget.SearchView
-import kotlinx.android.synthetic.main.activity_main.*
-
 
 class MainFragment() : Fragment() {
 

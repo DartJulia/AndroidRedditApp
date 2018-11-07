@@ -1,15 +1,9 @@
 package com.example.juliadart.redditcodechallenge.UI
 
-import android.annotation.SuppressLint
 import android.arch.lifecycle.MutableLiveData
-import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.util.AttributeSet
 import android.view.KeyEvent
-import android.view.View
 import com.example.juliadart.redditcodechallenge.R
 import kotlinx.android.synthetic.main.activity_main.*
 
