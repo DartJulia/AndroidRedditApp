@@ -2,6 +2,7 @@ package com.example.juliadart.redditcodechallenge.UI
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModel
+import android.net.Uri
 import android.support.annotation.NonNull
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -13,6 +14,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.example.juliadart.redditcodechallenge.API.ApiClient
 import com.example.juliadart.redditcodechallenge.Model.Child
 import com.example.juliadart.redditcodechallenge.Model.ChildData
 import com.example.juliadart.redditcodechallenge.R
@@ -39,11 +41,10 @@ class MainListAdapter() :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.mTitle.text = childrenArray[position].title
-        holder.mTitle.setOnClickListener {  }
-
         holder.mCategory.text =  "r/" + childrenArray[position].subreddit
         holder.mImage.loadImg(childrenArray[position].thumbnail)
-
+        holder.mUrl.text = childrenArray[position].url
+        var uri:Uri = Uri.parse(childrenArray[position].url)
     }
 
     fun setChildData(childList : Collection<ChildData>){
@@ -56,6 +57,7 @@ class MainListAdapter() :
             val mTitle: TextView = itemView.findViewById(R.id.titleItem)
             val mImage: ImageView = itemView.findViewById(R.id.imageItem)
             val mCategory: TextView = itemView.findViewById((R.id.categoryItem))
+            val mUrl: TextView = itemView.findViewById(R.id.url)
 
     }
 

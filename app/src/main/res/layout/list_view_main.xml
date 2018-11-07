@@ -12,13 +12,25 @@
             android:id="@+id/categoryItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="This will be where the subreddit category will go"
+            android:contentDescription="subreddit category"
             android:textSize="12sp"
             android:text="Subreddit"
             android:textColor="@color/red"
             android:layout_alignStart="@id/imageItem"
             android:layout_above="@id/titleItem"
     />
+    <TextView
+            android:id="@+id/url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Url"
+            android:textSize="12sp"
+            android:text="url"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignStart="@id/imageItem"
+            android:layout_above="@id/titleItem"
+    />
+
     <LinearLayout android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:orientation="horizontal">
@@ -27,7 +39,7 @@
             android:id="@+id/titleItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="This will be where the title will go"
+            android:contentDescription="Post title"
             android:textSize="18sp"
             android:text="Post Title"
             android:layout_marginRight="5dp"

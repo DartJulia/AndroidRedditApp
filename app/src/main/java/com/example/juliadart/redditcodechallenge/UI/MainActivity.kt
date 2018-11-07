@@ -7,7 +7,6 @@ import android.view.KeyEvent
 import com.example.juliadart.redditcodechallenge.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainActivity : AppCompatActivity() {
 
     val searchInput = MutableLiveData<String>()
